@@ -103,25 +103,6 @@ std :: string getUserString(std :: string statement) {
     return userString;
 }
 
-MYSQL* getConnection () {
-    std :: ifstream connectionInfo; connectionInfo.open("connection_info.txt");
-
-    struct connection_details mysqlD;
-    if(connectionInfo.is_open()) {
-        std :: cout << "IN!\n";
-        std :: string svr, usr, pw, db;
-        std :: getline(connectionInfo, svr);
-        mysqlD.server = svr.c_str(); 
-        std :: getline(connectionInfo, usr);
-        mysqlD.user = usr.c_str(); 
-        std :: getline(connectionInfo, pw);
-        mysqlD.password = pw.c_str(); 
-        std :: getline(connectionInfo, db);
-        mysqlD.database = db.c_str(); 
-    }
-    return mysql_connection_setup(mysqlD);    
-}
-
 int main (int argc, char const *argv[]) {    
 	MYSQL *con;	
     MYSQL_RES *res; 
