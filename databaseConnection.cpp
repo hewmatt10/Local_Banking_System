@@ -19,7 +19,6 @@ MYSQL* getConnection () {
 
     struct connection_details mysqlD;
     if(connectionInfo.is_open()) {
-        std :: cout << "IN!\n";
         std :: string svr, usr, pw, db;
         std :: getline(connectionInfo, svr);
         mysqlD.server = svr.c_str(); 
