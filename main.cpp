@@ -13,12 +13,6 @@
 
 
 int main (int argc, char const *argv[]) {    
-	MYSQL *con;	
-    MYSQL_RES *res; 
-    MYSQL_ROW row;	
-
-    con = getConnection();
-
     bool loggedIn = false;
     int cardNumber = -1;
     while (true) {
@@ -112,15 +106,11 @@ int main (int argc, char const *argv[]) {
 
             case '3':{
                 std :: cout << "Exited successfully.\n";
-                goto exitSequence;
-                break;
+                return 0;
             }  
             }
          }
 
     }
     
-exitSequence:    
-    mysql_close(con);
-	return 0;
 }
