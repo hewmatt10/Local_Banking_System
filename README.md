@@ -1,6 +1,6 @@
 # Local Banking System
 ---
-## Setup
+## Setup Instructions
 
 1. Download MySQL
 2. Create a new user in MySQL
