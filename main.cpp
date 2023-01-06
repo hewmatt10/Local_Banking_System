@@ -1,7 +1,5 @@
 #include<iostream>
 #include<fstream>
-#include<mysql.h>
-#include<string>
 #include<cstdlib>
 #include<cmath>
 #include "databaseConnection.cpp"
